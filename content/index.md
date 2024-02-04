@@ -1,30 +1,53 @@
 ---
 title: "Project Mithril: The Quest for Collaborative Excellence"
 ---
-Embark on a journey through the lands of knowledge management with Obsidian, a tool as powerful and versatile as the forge of Erebor, but designed for the modern developer. This guide will unveil how to use Obsidian to create, link, and manage your development documentation in a way that's both efficient and almost magically interconnected.
+The following documents will explain the features and the uses of Obsidian for the developer documentation workflow. 
 
-## **Setting the Foundation: Your First Note**
+## Introduction
 
-Begin by creating your foundational note, akin to laying the first stone of Minas Tirith. This could be the README of your project, titled `Project Overview`.
+### Identifying the Problem
+
+Our current approach to documenting development and business features is insufficient. For example, when building a form, crucial details such as validation rules, field character limits, success and failure messages, payload agreements, and return page specifications must be finalized beforehand. This ensures that no time is wasted revisiting these elements during development.
+
+### The Proposed Solution
+
+To foster better documentation practices among our developers, we have explored several tools that offer rich features and accessible ecosystems. We have chosen to experiment with Obsidian, an offline markdown editor that enhances the standard markdown functionality. This allows for easier navigation and the creation of elegant, user-friendly notes. Obsidian is supported by a robust open-source community, which continually enhances note-taking and synchronization features.
+
+In our proposed framework, we utilize an open-source repository, [Quartz](https://quartz.jzhao.xyz/), to convert Obsidian pages into HTML. These can then be deployed on a static page server. For our demonstration, we employed GitHub Pages along with GitHub Actions to automate the build and deployment process upon each PR merge.
+
+### Advantages of Our Method
+
+- **Enhanced Markdown Experience**: Developers can enjoy a rich markdown editing experience with minimal setup—simply download the Obsidian desktop client.
+- **Community Support**: Access to a vast array of open-source community plugins can streamline documentation workflows, leading to a more seamless experience.
+- **GitHub Integration**: Documentation can be reviewed and approved through GitHub, encouraging full team participation and making it an essential part of our development process.
+- **User-Friendly Documentation**: Our method offers a single-page documentation experience similar to platforms like Confluence, complete with shareable links for easy access.
+- **Independence and Transparency**: By hosting and managing our documentation internally, we maintain full control over the process and benefit from the historical tracking provided by Git.
+
+### Disadvantages from the method
+* **Configuration Limitations**: Our existing repository structure may impose certain restrictions on configuration options.
+
+## Some obsidian feature
 
 ### **Creating and Linking Notes**
 
-As you document various features or components, link them together using [[page link feature]] syntax. Imagine creating pathways between the different realms of your project, making navigation as seamless as traveling through the Shire.
+One of the most powerful feature is [[page link feature]]. This looks fairly simple on paper but it coupled with the graph view and the backlink access can provide a really powerful experience for the consumer.
 
-### **Crafting Tables for Structured Data**
+### Structured Data with Tables
 
-Tables in Obsidian are like the archives of Gondor, organizing your data with precision. Use them to detail API endpoints, configurations, or project dependencies.
+Utilize tables to systematically organize data, such as API endpoints or project configurations, ensuring information is readily accessible and clearly presented.
 
-| Endpoint       | Method | Description             |
-|----------------|--------|-------------------------|
-| /api/forge     | POST   | Creates a new artifact  |
-| /api/forge/:id | GET    | Retrieves an artifact   |
+markdownCopy code
 
-### **Embedding Code Snippets: The Magic of Markdown**
+| Endpoint        | Method | Description              |
+|-----------------|--------|--------------------------|
+| /api/forge      | POST   | Creates a new artifact   |
+| /api/forge/:id  | GET    | Retrieves an artifact    |
+### Embedding Code Snippets
 
-Obsidian's markdown support allows you to embed code snippets, turning your documentation into a living spellbook. Document functions, command usage, or configuration examples right within your notes.
+Incorporate code snippets directly into your documentation, providing real-world examples and usage scenarios that enhance understanding and implementation.
 
-Also we can have full code blocks with syntax highlight
+javascriptCopy code
+
 ```JS
 // Function to summon an HTTP request
 const summonRequest = async (url) => {
@@ -33,17 +56,15 @@ const summonRequest = async (url) => {
 }
 ```
 
-## **The Power of Backlinks: Weaving Your Web of Knowledge**
+#### Leveraging Backlinks
 
-Backlinks in Obsidian reveal the interconnected nature of your documentation, much like the secret paths of Middle-earth. They show you how notes reference each other, illuminating relationships and dependencies that might not be immediately apparent.
+Backlinks help in identifying the interconnections between documentation sections, offering insights into related components and their interactions.
 
-## **Showcasing Advanced Features**
+### Advanced Documentation Features
 
-- **Graph View:** Visualize your project's documentation as a dynamic graph, akin to seeing Middle-earth from the Eagles' perspective. This helps in understanding the overall structure and identifying areas that need more documentation.
-- **Custom CSS:** Tailor the look of your Obsidian vault with custom CSS. This can make your documentation visually appealing and easier to navigate.
+- **Graph View**: Offers a holistic view of the documentation structure, aiding in the identification of under-documented areas.
+- **Custom CSS**: Enhances the visual appeal and navigability of the documentation, making it more engaging and user-friendly.
 
-## **Conclusion: Your Fellowship of Notes**
+### Conclusion
 
-As you build your documentation in Obsidian, think of it as forming your own Fellowship, with each note playing a crucial role in your project's success. Your notes, like the members of the Fellowship, are stronger and more effective when linked together, supporting one another.
-
-Remember, the goal is not just to document for the sake of documentation but to create a living, breathing knowledge base that grows and evolves with your project. May your journey through the lands of coding and documentation be both fruitful and enlightening.
+Our documentation, akin to a well-coordinated team, becomes more robust and effective through interconnectedness and comprehensive coverage. By adopting Obsidian and integrating these practices, we aim to build a dynamic and evolving knowledge base that supports our development efforts with precision and clarity.
