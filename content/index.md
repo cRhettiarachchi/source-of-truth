@@ -1,5 +1,5 @@
 ---
-title: "Project Mithril: The Quest for Collaborative Excellence"
+title: Documentation update proposal
 ---
 The following documents will explain the features and the uses of Obsidian for the developer documentation workflow. 
 
