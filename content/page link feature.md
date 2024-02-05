@@ -35,5 +35,3 @@ One of Obsidian's most powerful features is the graph view, which visually displ
 - **Feature Documentation**: Link related features and components together to provide a comprehensive overview of your system's architecture.
 - **API References**: Create a central API reference note and link to specific endpoints or methods in your functional documentation.
 - **Troubleshooting Guides**: Link troubleshooting guides to relevant feature documentation, providing a quick path for developers to follow when encountering issues.
-
-[[second page link]]
